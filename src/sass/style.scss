@@ -1,8 +1,23 @@
 @import 'libs/bootstrap-reboot.min';
-@import 'libs/fonts/fonts.css';
+@import '../fonts/fonts.css';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'blocks/promo';
+@import 'blocks/title';
+@import 'blocks/buttons';
+@import 'blocks/sidepanel';
+@import 'blocks/menu';
+
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
     margin: 0;
     padding: 0;
+}
+
+.container {
+
+    width: 1140px;
+    margin: 0 auto;
 }
