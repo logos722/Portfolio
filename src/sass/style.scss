@@ -7,7 +7,8 @@
 @import 'blocks/buttons';
 @import 'blocks/sidepanel';
 @import 'blocks/menu';
-
+@import 'blocks/aboutMe';
+@import 'blocks/resume';
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -20,4 +21,11 @@
 
     width: 1140px;
     margin: 0 auto;
+}
+
+.divider {
+    margin-top: 4px;
+    width: 60px;
+    height: 3px;
+    background-color: $main-color;
 }

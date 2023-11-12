@@ -1,0 +1,20 @@
+.resume {
+  padding-top: 120px;
+  &__title {
+    text-align: center;
+    position: relative;
+    @include before_circle;
+    &::before {
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+  }
+  &__subtitle {
+    text-align: center;
+  }
+  .divider {
+    margin: 25px auto 0 auto;
+  }
+}
