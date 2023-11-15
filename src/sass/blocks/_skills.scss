@@ -1,0 +1,28 @@
+.skills {
+  padding-top: 120px;
+  .divider {
+    margin: 25px auto 0 auto;
+  }
+  &__wrapper {
+    display: grid;
+    margin-top: 65px;
+    grid-template-columns: repeat(4, 270px);
+    grid-template-rows: repeat(2, minmax(270px, auto));
+    gap: 13px;
+    grid-auto-rows: minmax(270px, auto);
+  }
+  &__item {
+    border: 1px solid black;
+    padding: 30px;
+    &-header {
+      margin-top: 20px;
+    }
+    &-descr {
+      margin-top: 15px;
+      color: #000;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+    }
+  }
+}

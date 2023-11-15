@@ -1,0 +1,38 @@
+.progress {
+  padding-top: 120px;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 70px);
+    gap: 30px 46px;
+    grid-auto-rows: 70px;
+  }
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-header {
+      position: relative;
+      @include before_circle;
+      &::before {
+        top: -37%;
+        left: -3%;
+      }
+    }
+    &-percent {
+      color: #000;
+    }
+    &-backLine {
+      margin-top: 27px;
+      width: 350px;
+      height: 14px;
+      background-color: #E8E4DE;
+      border-radius: 4px;
+    }
+    &-frontLine {
+      height: 100%;
+      border-radius: 4px;
+      background-color: $main-color;
+    }
+  }
+}

@@ -2,7 +2,7 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 60px;
-  &_fs14 {
+  &_fz14 {
     font-size: 14px;
     line-height: 21px;
   }
@@ -14,7 +14,21 @@
     font-size: 20px;
     line-height: 30px;
   }
-  &_fs48 {
+  &_fz48 {
     font-size: 48px;
+  }
+  &_section-title {
+    text-align: center;
+    position: relative;
+    @include before_circle;
+    &::before {
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+  }
+  &_section-subtitle {
+    text-align: center;
   }
 }
