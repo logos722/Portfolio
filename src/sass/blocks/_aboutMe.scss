@@ -1,84 +1,60 @@
-.aboutMe {
-  min-height: 840px;
-  padding: 100px 0 0 0;
-  &__grid-container {
-    width: 100%;
-    min-height: 700px;
-    display: grid;
-    grid-template-columns: 1fr 70px 2fr 100px;
-    grid-template-rows: 80px minmax(125px, auto) minmax(290px, auto) 1fr;
-    grid-row-gap: 20px;
-    grid-template-areas: 
-    "photo . titleRow ." 
-    "photo . descr ."
-    "photo . skills ."
-    "photo . . .";
-  }
-  &__grid-title-row {
-    grid-area: titleRow;
+.about {
+  padding-top: 120px;
+  &__wrapper {
+      display: grid;
+      grid-template-columns: 400px 670px;
+      grid-template-rows: minmax(245px, auto) minmax(255px, auto);
+      grid-auto-rows: minmax(245px, auto);
+      column-gap: 70px;
+      row-gap: 40px;
   }
   &__photo {
-    grid-area: photo;
-  }
-  &__title {
-    line-height: normal;
-  }
-  &__title_fz16 {
-    line-height: normal;
-  }
-  &__subtitle {
-    grid-area: subtitle;
+      grid-row: 1/3;
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
   }
   &__descr {
-    grid-area: descr;
-    color: #000;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: normal;
+      padding-top: 6px;
+      .divider {
+          margin: 0;
+      }
+  }
+  &__title {
+      position: relative;
+      padding: 1px 0 0 12px;
+      @include before_circle;
+  }
+  &__text {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 21px;
   }
   &__skills {
-    grid-area: skills;
-    display: grid;
-    grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px);
-    grid-auto-rows: 1fr;
-    gap: 20px 50px;
-  }
-  &__items {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 3fr;
-    row-gap: 6px;
-  }
-  &__item-img {
-    width: 25px;
-    height: 100%;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    position: relative;
-    z-index: 2;
-    @include before_circle;
-    &::before {
-      top: -9%;
-      left: -24%;
-    }
-  }
-  &__item-descr {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    color: #000;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: normal;
-  }
-  &__item-title {
-    justify-self: start;
-    color: #000;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: normal;
+      display: grid;
+      grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px);
+      grid-auto-rows: 1fr;
+      column-gap: 50px;
+      row-gap: 20px;
+      &-item {
+          display: grid;
+          grid-template-columns: 40px 200px;
+          column-gap: 20px;
+      }
+      &-circle {
+          position: relative;
+          padding: 15px 0 0 15px;
+          @include before_circle;
+          &:before {
+              top: 0;
+          }
+      }
+      &-text {
+          margin-top: 6px;
+          font-size: 12px;
+          line-height: 18px;
+      }
   }
 }
