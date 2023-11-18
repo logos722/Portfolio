@@ -12,7 +12,7 @@
     display: block;
     width: 30px;
     height: 3px;
-    background-color: #151812;
+    background-color: #fff;
   }
   span.long {
     width: 36px;
@@ -61,6 +61,8 @@
   }
   &__link {
     position: relative;
+    width: 100%;
+    height: 100%;
     font-weight: 700;
     font-style: 24px;
     line-height: 36px;
@@ -110,6 +112,6 @@
     width: 100%;
     height: 100%;
     background-color: #fff;
-    opacity: 0.75;
+    opacity: 0.6;
   }
 }

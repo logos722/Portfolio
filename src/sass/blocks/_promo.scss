@@ -2,7 +2,12 @@
   min-height: 100vh;
   position: relative;
   background: url('../img/main_bg.jpg') no-repeat 50%/cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
   padding-top: 205px;
+  .container {
+    color: #fff;
+  }
   &__title {
     width: 535px;
     margin-top: 10px;
@@ -13,12 +18,13 @@
     width: 250px;
     justify-content: space-between;
     align-items: center;
+    
   }
   &__link {
-    color: #000;
+    color: #fff;
     font-weight: 700;
     &:hover {
-      color: #000;
+      color: #fff;
       text-decoration: none;
       cursor: pointer;
     }
