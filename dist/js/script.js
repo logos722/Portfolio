@@ -35,32 +35,25 @@ document.addEventListener('click', (e) => {
 })
 
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("myForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Предотвращаем обычное поведение формы
+  document.querySelector("#myForm").addEventListener("submit", function(event) {
+      event.preventDefault();
 
-      // Собираем данные из формы
       var formData = new FormData(this);
-      console.log(formData)
 
-      // Создаем объект XMLHttpRequest
-      var xhr = new XMLHttpRequest();
+      if (formData.size === 0) {
+        console.log("FormData is empty");
+        return;
+      }
 
-      // Настраиваем запрос
-      xhr.open("POST", "./mail.php", true); // Замените на путь к вашему PHP-скрипту
 
-      // Отправляем данные на сервер
-      xhr.send(formData);
-
-      // Обработка успешного ответа
-      xhr.onload = function() {
-          if (xhr.status === 200) {
-              // Обработка успешного ответа (если нужно)
-              console.log(xhr.responseText);
-          } else {
-              // Обработка ошибок (если нужно)
-              console.error(xhr.statusText);
-          }
-      };
+      // Отправка данных на сервер
+      fetch("mailer/smart.php", {  // Измените путь на соответствующий вашему расположению файла
+          method: "POST",
+          body: formData
+      })
+      .then(response => response.text())
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
   });
 });
 
